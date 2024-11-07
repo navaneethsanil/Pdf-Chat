@@ -13,11 +13,6 @@ Key components of this project:
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Architecture](#architecture)
-- [Components](#components)
-- [Configuration](#configuration)
-- [License](#license)
 
 ## Features
 
