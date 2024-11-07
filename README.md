@@ -1,4 +1,4 @@
-# PDF Chat System using LangChain, Pinecone, Mistral, and all-mpnet-base-v2
+# PDF Chat System using LangChain
 
 This repository contains a project to build a PDF chat system that enables users to interact with PDF documents. By leveraging a Retrieval-Augmented Generation (RAG) pipeline, users can ask questions related to the content of a document, and the system retrieves relevant information to respond intelligently. 
 
