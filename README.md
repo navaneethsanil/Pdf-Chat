@@ -41,7 +41,7 @@ Key components of this project:
 `pip install -r requirements.txt`
 
 # Create a .env file to store API keys and configuration settings:
-PINECONE_API_KEY=your_pinecone_api_key
+'''PINECONE_API_KEY=your_pinecone_api_key
 PINECONE_ENVIRONMENT=your_pinecone_environment
 MISTRAL_API_KEY=your_mistral_api_key
-INDEX_NAME=your_index_name
+INDEX_NAME=your_index_name'''
