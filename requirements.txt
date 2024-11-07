@@ -1,0 +1,10 @@
+langchain
+langchain_community
+langchain_core
+pypdf
+langchain-text-splitters
+langchain-huggingface
+tqdm
+langchain-pinecone
+langchain_mistralai
+python-dotenv
