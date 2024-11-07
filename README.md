@@ -38,7 +38,7 @@ Key components of this project:
    cd pdf-chat-system
 
 # Install the required Python packages:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 # Create a .env file to store API keys and configuration settings:
 PINECONE_API_KEY=your_pinecone_api_key
