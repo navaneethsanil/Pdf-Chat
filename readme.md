@@ -1,4 +1,4 @@
-# PDF Chat System using LangChain, Pinecone, Mistral, and all-mpnet-base-v2
+# PDF Chat System using LangChain
 
 This repository contains a project to build a PDF chat system that enables users to interact with PDF documents. By leveraging a Retrieval-Augmented Generation (RAG) pipeline, users can ask questions related to the content of a document, and the system retrieves relevant information to respond intelligently. 
 
@@ -13,11 +13,6 @@ Key components of this project:
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Architecture](#architecture)
-- [Components](#components)
-- [Configuration](#configuration)
-- [License](#license)
 
 ## Features
 
@@ -43,10 +38,11 @@ Key components of this project:
    cd pdf-chat-system
 
 # Install the required Python packages:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 # Create a .env file to store API keys and configuration settings:
-PINECONE_API_KEY=your_pinecone_api_key
-PINECONE_ENVIRONMENT=your_pinecone_environment
-MISTRAL_API_KEY=your_mistral_api_key
-INDEX_NAME=your_index_name
+`PINECONE_API_KEY=your_pinecone_api_key`
+`PINECONE_ENVIRONMENT=your_pinecone_environment`
+`MISTRAL_API_KEY=your_mistral_api_key`
+`LANGSMITH_API_KEY=your_langsmith_api_key`
+`INDEX_NAME=your_index_name`
