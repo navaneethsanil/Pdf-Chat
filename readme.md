@@ -33,9 +33,11 @@ Key components of this project:
 ### Install Dependencies
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/navaneethsanil/Pdf-Chat.git
-   cd pdf-chat-system
+
+   `git clone https://github.com/navaneethsanil/Pdf-Chat.git`
+   `cd Pdf-Chat`
+   `python -m venv env`
+   `source env/scripts/activate`
 
 # Install the required Python packages:
 `pip install -r requirements.txt`
