@@ -16,6 +16,10 @@ if "document_path" not in st.session_state:
 with st.sidebar:
     uploaded_file = st.file_uploader("Upload your PDF document", type=("pdf"))
 
+    # Create the uploaded_files directory if it doesn't exist
+    if not os.path.exists("./uploaded_files"):
+        os.makedirs("./uploaded_files")
+    
     if uploaded_file and not st.session_state.uploaded:
         with st.spinner("Uploading document, please wait..."):
             # Save the uploaded file to a temporary path
