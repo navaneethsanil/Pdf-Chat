@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from backend import upload_document, query_document
 
