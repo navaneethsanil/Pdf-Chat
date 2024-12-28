@@ -70,7 +70,7 @@ def query_document(query: str, chat_history: List[Dict[str, str]] = []):
     max_retries=2
   )
 
-  vectorstore = PineconeVectorStore(index_name=os.getenv("INDEX_NAME"), embedding=embedding_model)
+  vectorstore = PineconeVectorStore(index_name=os.getenv("INDEX_NAME"), embedding=embedding_model, namespace="document_namespace")
 
   rephrase_prompt = hub.pull("langchain-ai/chat-langchain-rephrase")
 
