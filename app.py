@@ -14,8 +14,21 @@ if "response" not in st.session_state:
 if "document_path" not in st.session_state:
     st.session_state.document_path = None
 
+# Function to reset upload state
+def reset_upload():
+    st.session_state.uploaded = False
+    st.session_state.chat_history = []
+    st.session_state.query_history = []
+    st.session_state.response = []
+    st.session_state.document_path = None
+
 with st.sidebar:
     uploaded_file = st.file_uploader("Upload your PDF document", type=("pdf"))
+
+    # Button to reset upload state
+    if st.session_state.uploaded:
+        if st.button("Upload New Document"):
+            reset_upload()
 
     # Create the uploaded_files directory if it doesn't exist
     if not os.path.exists("./uploaded_files"):

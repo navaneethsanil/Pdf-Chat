@@ -9,6 +9,7 @@ from langchain import hub
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
+from pinecone.grpc import PineconeGRPC as Pinecone
 from typing import Dict, List
 
 
@@ -26,6 +27,10 @@ def upload_document(doc_path: str):
   Args:
     doc_path: The path to the document to be uploaded.
   '''
+  # Delete existing Pinecone namespace
+  pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
+  index = pc.Index(host=os.environ.get("INDEX_HOST"))
+  index.delete(delete_all=True, namespace="document_namespace")
   
   # Load the document
   loader = PyPDFLoader(doc_path)
@@ -48,6 +53,7 @@ def upload_document(doc_path: str):
     text_chunks,
     embedding_model,
     index_name=os.getenv('INDEX_NAME'),
+    namespace="document_namespace"
   )
 
 
