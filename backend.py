@@ -27,9 +27,23 @@ def upload_document(doc_path: str):
   Args:
     doc_path: The path to the document to be uploaded.
   '''
+
   # Delete existing Pinecone namespace
   pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
   index = pc.Index(host=os.environ.get("INDEX_HOST"))
+
+  # Initializing namespace
+  index.upsert(
+    vectors=[
+        {
+            "id": "1",
+            "values": [1.0] * 768,
+        },
+    ],
+    namespace="document_namespace",
+  )
+
+  # Delete existing Pinecone namespace
   index.delete(delete_all=True, namespace="document_namespace")
   
   # Load the document
