@@ -32,7 +32,8 @@ def upload_document(doc_path: str):
   pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
   index = pc.Index(host=os.environ.get("INDEX_HOST"))
 
-  # Initializing namespace and deleting existing namespace. Because when you upload new document, all the previous document data will be earsed from the database
+  '''Initializing namespace and deleting existing namespace. Because when you upload new document, 
+  all the previous document data will be earsed from the database. Without the initialization, it will arise namespace not found error'''
   index.upsert(
     vectors=[
         {
