@@ -32,7 +32,7 @@ def upload_document(doc_path: str):
   pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
   index = pc.Index(host=os.environ.get("INDEX_HOST"))
 
-  # Initializing namespace
+  # Initializing namespace and deleting existing namespace. Because when you upload new document, all the previous document data will be earsed from the database
   index.upsert(
     vectors=[
         {
